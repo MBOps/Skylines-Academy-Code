@@ -14,3 +14,12 @@ resource "azurerm_storage_account" "skylinesstrg" {
     environment = "dev"
   }
 }
+
+resource "azurerm_resourcegroup" "skylinesrg" {
+  name                     = var.resourceGroupName
+  location                 = var.location
+
+  tags = {
+    environment = "dev"
+  }
+}
